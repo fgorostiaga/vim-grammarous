@@ -159,8 +159,8 @@ function! grammarous#info_win#open(e, bufnr)
     nnoremap <buffer>f :<C-u>call grammarous#info_win#action_fixit()<CR>
     nnoremap <silent><buffer>r :<C-u>call grammarous#info_win#action_remove_error()<CR>
     nnoremap <silent><buffer>R :<C-u>call grammarous#info_win#action_disable_rule()<CR>
-    nnoremap <silent><buffer>n :<C-u>call grammarous#info_win#action_next_error()<CR>
-    nnoremap <silent><buffer>p :<C-u>call grammarous#info_win#action_previous_error()<CR>
+    nnoremap <silent><buffer><C-n> :<C-u>call grammarous#info_win#action_next_error()<CR><C-w><C-w>
+    nnoremap <silent><buffer><C-p> :<C-u>call grammarous#info_win#action_previous_error()<CR><C-w><C-w>
     nnoremap <silent><buffer>? :<C-u>call grammarous#info_win#action_help()<CR>
     return bufnr('%')
 endfunction
